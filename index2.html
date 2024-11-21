@@ -12,9 +12,16 @@
     let masculino = [];
     let feminino = [];
     for( let sexo of listaDeNomes){
-        const genero = prompt(``);
+        const genero = prompt(`Qual é o genero de ${sexo}, escreva M para masculino e F para feminino`).toLowerCase();
+        if (genero == "m") {
+            masculino.push(sexo)
+        } else if (genero == "f") {
+            feminino.push(sexo)
+        } else {
+            alert(`${genero} NÃO É UM GÊNERO!!!!!!!!`)
+        }
     }
-
+    document.write(` Masculino : <br> ${masculino.join("<br>")} <br> Feminino: <br> ${feminino.join("<br>")}`);
     //SAÍDA
 
 </script>
